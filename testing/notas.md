@@ -1,83 +1,60 @@
-CURSO COMPETO DE TESTING
 
-*EXISTEN DOS TIPOS DE PRUEBAS: PRUEBAS UNITARIAS Y PRUEBAS DE INTEGRACION
-UNITARIAS: PRUEBA PEQUEÑAS PIEZAS DE LA APLICACION
-DE INTEGRACION: COMO FUNCIONAN VARIAS PIEZAS EN CONJUNTO
+**************************PRACTICANDO TESTING
+En src se crea una carpeta llamada base-pruebas y una carpeta hermana llamada tests. De manera que base-pruebas y tests serian dos carpetas hermanas ambas dentro de src.
+Dentro de tests creamos otra carpeta llamada base-pruebas que seria la carpeta espejo de la carpeta base-pruebas que existe en src. La dinamica es que en la carpeta base-pruebas de src hay ejercicios de javascript cada ejercicio en su propio archivo y por cada archivo existente en base-pruebas de src tiene un archivo de mismo nombre en el base-pruebas de la carpeta test.
 
-LAS PRUEBAS UNIARIAS DEBEN SER FACILES DE ESCRIBIR,LEER,CONFIABLES,RAPIDAS Y PRINCIPALMENTE UNITARIAS
+************************CONFIGURACION INICIAL PARA EL TESTING
+Cuando hablamos de CRA hay que hacer pocas configuraciones pero con vite hay que hacer mas configuraciones.Como se indica a continuacion.
 
-AAA = ARRANGE, ACT, ASSERT
+Se trabaja con react testing library y jest
+Esta configuracion se hace una vez en el proyecto pero segun lo aprendido en el curso de udemy es importante hacerlo de manera reiterativa para tener practica.
 
-LAS PRUEBAS SE PUEDEN AUTOMATIZAR POSTERIORMENTE PERO PRIMERO DEBEN SER CREADAS.
+*Ir al sitio oficial de jest jest.io
+Notica:se trabajara con jest en conjunto con react-testing-library mas adelante.
 
-***LA RECOMENDACION : PROBAR SIEMPRE LA RUTA CRITICA PARA AHORRAR DESPERDICIOS DE TIEMPO.
-
-CON CRA NO HAY QUE HACER TANTAS CONFIGURACIONES PORQUE LA MAYORIA DE LAS COSAS VIENE PRECONFIGURADAS.
-CON VITE SI HAY QUE HACER CONFIGURACIONES.
-
-***LA CONFIGURACIOLN DEL FRAMEWORK DE PRUEBA ES ALGO QUE HAY QUE HACER DE MANERA REPETIDA PARA MEMORIZARLO Y ACOSTUNBRARSE A TESTEAR.
-
-**SE TRABAJA CON JEST Y REACT TESTING LIBRAY QUE SON AMBOS COLABORATICVOS Y NO SE REEMPLAZAN ENTRE SI
-
-CONFIGURACION:
-1. yarn add --dev jest
-2. en los scripts del paquete json agregar "test": "jest" o "test": "jest --watchAll" el --watchAll es preferible ya que pone al test alerta de cualquier cambio.
-3. Abres otra ventana de la terminal y ejecutas el comando : yarn test para npm : npm run test (te generarea)
-4. el carpetaa de pruebas puede tomar uno de varios lugares en el file system. Seria buena practica colocarlo al lado del proyecto src y no dentro de el para no hacer el src mas pesado o mas grande.entonces se crea una carpeta test al lado o a nivel de src.Esta carpeta va a ser una carpeta espejo de src es como si fuera un src2 solo que las extenciones de los archivos sera .test.js
-5. Dentro de test creamos un archivo demo.test.js y corremos el comando yarn test ...obvio me generqara un error diciendo que p'or lo menos debe haber una prueba.
-
-Sintaxis basica de una prueba:
-test('esta prueba no debe fallar',()=>{
-
-})
-
-Ejemplos: 
-1.test('Esta prueva np puede fallar',()=>{
-if(0===0){
-throw new Error('No se puede dividir entre cero')
+*En la pagina oficial copiar el comando de instalacion yarn add --dev jest
+**Vamos a la terminal de vscode y pegamos el comando y ejecutamos.
+**ejecutamos el comando yarn add -D @types/jest  //para activar el intelisence del autocompletado o sugerenciaas de la sintaxis de jest.
+Notica: ojo que si estas con npm escojes el comando respectivo de npm y si estas en yarn escoges el de yarn
+*Verifica la dependencia en el package.json
+*En el package.json pegar el script del test:
+{
+"scripts":{
+"test":"jest"
 }
-})   Aqui la prueba falla porque if da true entonces se lanza el error prefabricado.
-
-2.test('Esta prueva np puede fallar',()=>{
-if(1===0){
-throw new Error('No se puede dividir entre cero')
 }
-})   
-Al dar false la condicion no se entra a las llaves por lo cual no se genera error y la prueba pasa
 
-Ahora con jest no tememos que tener codigo dentro de nuestra sintaxis basica de porueba. Solo tener en cuanta el concepto de AAA
-Ejemplo:
+Quedaria asi:
 
-test('esta es una prueba',()=>{
-//A
-const message1 = 'Hola Mundo';
-//A
-const message2 = message1.trim();
-//A
+"scripts":{
+"dev":"vite",
+"build":"vite build",
+"preview":"vite preview",
+"test":"jest --watchAll"     **le metemos watchAll para que escuche constantemente 
+}
 
-expect(message1).toBe(message2);
+*Abre una terminal y ejecuta yarn test, eso te dara un pequeño error lo cual es normal
 
+*la carpeta espejo que se creo arriba, se incluye al lado de src como carpeta hermana de src y no se coloca dentro para no abultar la src. en todo caso hay varias maneras de hacer la estructura. para este caso puntual nos fuimos por crear la carpeta test al lado de src como carpeta hermana.
+La sintaxis es tipo demo.test.js
 
-})
+*estructura de una prueba: test('este es el modelo de prueba',()=>{})
 
+***Jest - Expect - toBe  => jest nos ayuda a que no tengamos que escribir codigo dentro de las pruebas
 
-para activar el autocompletado y sugerencias de la jerga de jest se instala como dependencisa de desarrollo el @types/jest como dependencia de desarrollo de la siguiente forma: 
-yarn add -D @types/jest
-
-nota: por temas de presentacion podemos usar un describe..el uso de describe me da mas organizacion
-
-el cascaron de describe es asi: 
-describe('pruebas en <Democomonent/>'()=>{}
-Aqui metes la prueba anterior:
-test('esta es una prueba',()=>{
-//A
-const message1 = 'Hola Mundo';
-//A
-const message2 = message1.trim();
-//A
-
-expect(message1).toBe(message2);
-
+Mira el siguiente ejemplo:
+test('esto no debe fallar',()=>{
+const message1 = 'Hola mundo';//inicializacion
+const message2 = message1.trim();//trimear seria el estimulo
+expect(message1).toBe(message2);//assert
 
 })
+
+En el ejemplo de arriba en vez de meter un if, usamos la sintaxis de jest
+
+
+***Para que las pruebas sse vean mas bonitas y organizadas podemos meter las pruebas dentro de un describe. la sintaxis de un describe es la siguiente y podemos utilizar varios describe dentro de un mismo archivo.
+
+describre('pruebas en <ComponenteEjemplo/>',()=>{
+//Aqui adentro puedes meter tus tests
 })
