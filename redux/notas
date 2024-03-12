@@ -1,0 +1,124 @@
+
+* En programacion existen varios patrones=> FLux, Redux, api context, props, etc. 
+Para el caso de redux es un patron mas.No es mas que una forma de trabajar.
+El ruducer no es mas que una funcion pura y nada mas.
+Mira redux es un contenedor predecible del estado de la aplicación.Tambien ayuda a que la modificacion de la informacion sea en una sola via lo que previene cambios accidentales y que se ira aprendiendo a medida que se desarrolla.
+
+store: es donde se encuentra la informacion que mis componentes consumiran.
+
+reducer: es solo una funcion pura que maneja un estado.En el reducer esta el estado.El estado es el que sirve la informacion a la vista para que renderice la informacion desseada.la vista es solo lectura pero puede generar actions para que cambie el estado se renderice una nueva vista.Es el funcionamiento microscopico de redux.
+
+                               ▬▬▬▬▌dispatcher▌▬▬▬▬▬
+                   ┌          ▐     Reducer        ▐
+                              ▐    ∑reducers       ▐store
+                              ▐                    ▐
+               actions         ▬▬▬▬▌   state ▌▬▬▬▬▬    
+                                         ▌
+                   └                     ▌
+                                 ▬▬▬▬▬ view
+
+*La grafica anterior y lo que se aprendido hasta ahora es para procesos sincronos. Es decir no hay peticiones http, o tareas asincronas. Para un proceso que tenga asincronia como por ejemplo una autenticacion, una peticion http, se precisaria entonces de un middleware en el dipatcher que estaria incorporado como en el ste.
+
+                      API ---------->middleware
+                          <----------middleware
+                               ▬▬▬▬▌dispatcher▌▬▬▬▬▬
+                   ┌          ▐     Reducer        ▐
+                              ▐    ∑reducers       ▐store
+                              ▐                    ▐
+               actions         ▬▬▬▬▌   state ▌▬▬▬▬▬    
+                                         ▌
+                   └                     ▌
+                                 ▬▬▬▬▬ view
+
+NOTA IMPORTANTE: NO HAY QUE CONFUNDIR REDUX CON REACT-REDUX CON REDUX TOOLKIT.
+REDUX COMO TAL ES EL PATRON QUE SE BASA EN CREAR NUEVOS ESTADOS BASADO EN REDUCERS.
+REACT-REDUX ERA COMO SE PRACTICABA REDUX EN REACT QUE VIENE CON COMPONENTES ESPECIALIZADOS ENCAPSULADOS ETC.MUCHO BOILERPLATE.
+RTK VIENE A SIMPLICAR EL PROCESO.
+
+EL RTK QUERY presenta varios beneficios al momento de hacer asincronia como mantener en cache de manera temporal las peticiones para evitar duplicidad etc.
+
+nota: redux es un patron pero react redux ese mismo que se ve en las importaciones es una serie de componentes.
+
+
+CREANDO UN SNIPPET PERSONALIZADO
+
+En esta vamos a crear un snippet que me permita crear un slice
+
+*ctrl + shift + P
+*ingrsa : configure user snippets
+*Selecciona javascript si en ese momento estas en un archivo de javascript o javascript-jsx si estas en jsx
+*descomenta el siguiente codigo y personaliza:
+// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+Thunks: los thunks es una accion que asincrona y que dispara otra accion cuando se resuelve la peticion asincrona
+
+un thunk es una fincion que realiza una tarea asincrona y cuando termina dispara una accion a nuestro reducer.
+
+EXKPLICACION DE ESTRUCTURA DEL SLICE
+const counterSlice = createSlice({
+    name: 'counter',
+    initialState: {},
+    reducers: {},
+});
+
+console.log(counterSlice);
+/*
+{
+    name: 'counter',
+    reducer: [generated reducer function],
+    actions: {
+        // ... generated action creators
+    },
+    // ... other properties
+}
+*/
+
+
+
+export const { reducer } = counterSlice.actions;
+export default counterSlice.reducer;
+
+El motivo de la desestructuración en la primera línea (export const { reducer } = counterSlice.actions;) es porque createSlice de Redux Toolkit crea un objeto con tres propiedades: name, reducer, y actions. La propiedad actions es un objeto que contiene automáticamente creadores de acciones basados en las funciones definidas en el bloque reducers. La propiedad reducer también se genera automáticamente y es el reducer principal para el "slice".
+
+
+const counterSlice = {
+    name: 'counter',
+    reducer: /* ... */,
+    actions: {
+        // ... generated action creators
+        reducer: /* ... */,
+    },
+};
+Debido a la desestructuración, const { reducer } = counterSlice.actions; extrae la propiedad reducer del objeto actions. En este caso específico, reducer dentro de counterSlice.actions se refiere al mismo objeto que counterSlice.reducer  
+
+
+En el contexto del código que proporcionaste:
+
+
+const counterSlice = {
+    name: 'counter',
+    reducer: /* ... */,
+    actions: {
+        // ... generated action creators
+        reducer: /* ... */,
+    },
+};
+La propiedad reducer que está directamente bajo counterSlice se refiere al reducer principal asociado a ese "slice" de Redux. Este reducer se utiliza para gestionar el estado específico del "slice" llamado 'counter'. Es el reducer que se pasará al store de Redux cuando configures tus reducers.
+
+
+
+                                     REDUX Y EL ROL DE REDUCER
+Redux es una biblioteca de gestión de estado para aplicaciones JavaScript, y se utiliza para mantener y gestionar el estado de la aplicación de una manera predecible y escalable. El estado de la aplicación se almacena en un objeto llamado store.
+
+                                  NOTAS
+Reducer: Correcto, el reducer es una función que toma el estado actual y una acción, y devuelve un nuevo estado. En este caso, pokemonSlice.reducer exporta la función reducer del slice.
+
+Las actions son objetos que contienen informacion sobre algo que ha ocurrido en la aplicacion.
+estos acciones son despachadas por dispatchers y manejadas por reducers.
