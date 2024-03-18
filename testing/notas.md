@@ -48,6 +48,7 @@ const message1 = 'Hola mundo';//inicializacion
 const message2 = message1.trim();//trimear seria el estimulo
 expect(message1).toBe(message2);//assert
 
+
 })
 
 En el ejemplo de arriba en vez de meter un if, usamos la sintaxis de jest
@@ -58,3 +59,10 @@ En el ejemplo de arriba en vez de meter un if, usamos la sintaxis de jest
 describre('pruebas en <ComponenteEjemplo/>',()=>{
 //Aqui adentro puedes meter tus tests
 })
+
+En la siguiente clase de hace la configuracion parea las pruebas dde nuestros distintos archivos, en caso de ver el error "You appear to be using a native ECMAScript module configuration file, Which only is supported when running babel asinchronously."Cambiar la extensiojn de los archivos jest.config.js y babel.congig.js a .cjs
+
+Para ver mas detalles al respecto pueden ir a https://nodejs.org/docs/latest/api/modules.html#enabling.
+
+
+
