@@ -65,4 +65,16 @@ En la siguiente clase de hace la configuracion parea las pruebas dde nuestros di
 Para ver mas detalles al respecto pueden ir a https://nodejs.org/docs/latest/api/modules.html#enabling.
 
 
+Notas: ojo que No se pueden hacer pruebas de un componente que no esta siendo exportado e importado.
+OJO: !!!!importantisimo: para un proyecto con vite como es el objeto de este curso, debes CONFIGURAR EL BABEL..MIRA LA DOCUMENTACION. EN TODO CASO TE DEJO EL COMANDO A EJECUTAR EN LA TERMINAL:
+
+yarn add --dev babel-jest @babel/core @babel/preset-env
+
+ADEMAS DE ESO HAY QUE CREAR UN ARCHIVO babel.config.js EN EL ROOT DEL PROYECTO  y dentro de ese archivo hay que pegar lo siguiente que aparece en la documentacion oficial: 
+module.exports = {
+  presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+};
+
+****Debes tener en cuenta que el test suite ejecuta el archivo.
+
 

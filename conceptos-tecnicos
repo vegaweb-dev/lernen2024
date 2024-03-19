@@ -1,0 +1,118 @@
+
+Conceptos tecnicos
+
+Ecma es una organizacion que viene funcionando desde los 60. Era la europian computer manufacturer asociation.
+Ecma esta encargada de la estandardizacion de informacion y comunicacion. NO solol tiene que ver con informacion sino que interviene en la standardizacion de hardware,software, comunocacion, lenguages de programacion, IoT, etc.
+javascript nace en el 95, como js venia creciendo demasiado rapido hubo la necesidad de standardizarlo, entonces se le solicita a ecma la diligencia de lo cual nace ecmascript. Ecmascript6 es javascript 2015...fue la implementacion de let const arrow functions etc.
+
+let tiene ambito de funcion. Osea si declaras let y le asignas valor en un archivo y dentro de ese archivo creas una funcion e intantas llamar a lat dentro de esa funcion, lo puedes hacer pues le asignaste el ambito de todo el archivo .pero si la declaras dentro de la funcion no la puedes llamar desde afuera ya que le has dado automaticamente el ambito de la funcion.
+
+
+LISTA DE IMPLEMENTACIONES DE ECMASCRIPT
+***JAVASCRIPT FUE CREADO EN EL 95
+Entendido, aquí tienes la lista desde ECMAScript 1 hasta ECMAScript 2021 con algunas de las características clave introducidas en cada edición y algunas de las implementaciones asociadas:
+
+ECMAScript 1 (ES1)
+
+Características clave:
+Sintaxis básica de JavaScript: variables, tipos de datos, funciones, etc.
+Implementaciones iniciales:
+Netscape JavaScript 1.1
+Internet Explorer 3.0
+JavaScriptCore (Safari)
+ECMAScript 2 (ES2)
+
+Características clave:
+Añadió soporte para nuevas estructuras como do-while, try-catch, y más.
+Implementaciones:
+Netscape JavaScript 1.3
+Internet Explorer 3.0
+JavaScriptCore (Safari)
+ECMAScript 3 (ES3)
+
+Características clave:
+Mejoras en el manejo de errores con try-catch
+Regular Expressions mejoradas
+Nuevo objeto Error
+Implementaciones:
+Netscape JavaScript 1.5
+Internet Explorer 6.0
+JavaScriptCore (Safari)
+Mozilla Rhino
+SpiderMonkey (Firefox)
+V8 (Google Chrome)
+ECMAScript 4 (ES4)
+
+No fue lanzado oficialmente.
+ECMAScript 5 (ES5)
+
+Características clave:
+Métodos nativos de Array
+Métodos nativos de String
+Métodos nativos de Object
+Implementaciones:
+V8 (Google Chrome)
+SpiderMonkey (Firefox)
+JavaScriptCore (Safari)
+Chakra (Internet Explorer / Microsoft Edge)
+Rhino (Mozilla)
+Nashorn (Java)
+Node.js
+ECMAScript 6 (ES6) / ECMAScript 2015
+
+Características clave:
+Arrow Functions
+Let y Const
+Clases
+Módulos
+Promesas
+Implementaciones:
+V8 (Google Chrome)
+SpiderMonkey (Firefox)
+JavaScriptCore (Safari)
+Chakra (Microsoft Edge)
+Node.js
+ECMAScript 2016 (ES7)
+
+Características clave:
+Array.prototype.includes()
+Exponentiation Operator (**)
+Implementaciones: (Estas características se agregaron a las implementaciones de ES6)
+ECMAScript 2017 (ES8)
+
+Características clave:
+Async Functions
+Object.values() y Object.entries()
+String padding
+Object.getOwnPropertyDescriptors()
+Implementaciones: (Estas características se agregaron a las implementaciones de ES6)
+ECMAScript 2018 (ES9)
+
+Características clave:
+Object Rest/Spread Properties
+Asynchronous Iteration
+Promise.prototype.finally()
+Implementaciones: (Estas características se agregaron a las implementaciones de ES6)
+ECMAScript 2019 (ES10)
+
+Características clave:
+Array.prototype.flat() / Array.prototype.flatMap()
+String.trimStart() / String.trimEnd()
+Object.fromEntries()
+Symbol.prototype.description
+Implementaciones: (Estas características se agregaron a las implementaciones de ES6)
+ECMAScript 2020 (ES11)
+
+Características clave:
+Optional Chaining (?.)
+Nullish Coalescing Operator (??)
+Promise.allSettled()
+String.prototype.matchAll()
+Implementaciones: (Estas características se agregaron a las implementaciones de ES6)
+ECMAScript 2021 (ES12)
+
+Características clave:
+Private Methods and Accessors
+Numeric Separators
+WeakRefs
+Implementaciones: (Estas características se agregaron a las implementaciones de ES6)
