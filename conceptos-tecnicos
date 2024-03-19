@@ -116,3 +116,213 @@ Private Methods and Accessors
 Numeric Separators
 WeakRefs
 Implementaciones: (Estas características se agregaron a las implementaciones de ES6)
+
+****************LET VS CONST
+LA DIFERENCIA PRONCIPAL ES LA MUTABILIDAD. 
+LET PERMITE QUE SE LE PUEDA REASIGNAR OTRO VALOR. 
+let car ='ford'
+car ='mercedez'
+
+A DIFERENCIA DE CONST QUE NO PERMITE REESCRIBIR O REASIGNARLE UN NUEVO VALOR UNA VEZ YA LE HAS ASIGNADO UNO.
+
+LA SEGUNDA DIFERENCIA ES QUE LET PERMITE SER DECLARADA SIN INICIALIZARLA ES DECIR SIN ASSIGNARLE VALOR POR LO QUE TE REGRESA UNDEFINED MIENTRAS QUE CONST DEBE SER DECLARADA E INICIALIZADA ENSEGUIDA.
+
+let y const son dos formas de declarar variables en JavaScript que se introdujeron en ECMAScript 6 (también conocido como ES6 o ECMAScript 2015). Aunque ambos se utilizan para declarar variables, tienen algunas diferencias clave:
+
+Mutabilidad:
+
+let: Las variables declaradas con let pueden ser reasignadas. Esto significa que su valor puede cambiar a lo largo del tiempo.
+const: Las variables declaradas con const no pueden ser reasignadas una vez que se les ha asignado un valor. El valor de una variable const es constante y no puede cambiar.
+Alcance:
+
+Tanto let como const tienen un alcance de bloque. Esto significa que están limitados al bloque en el que son declarados. Fuera de ese bloque, no están accesibles.
+Inicialización:
+
+Las variables let pueden ser declaradas sin asignarles un valor inicial. En este caso, se inicializan con el valor undefined.
+Las variables const deben ser inicializadas al momento de la declaración. No pueden ser declaradas sin un valor inicial.
+
+
+
+***************VAR VS LET
+La diferencia principal entre let y var radica en el ámbito de las variables y cómo se comportan en relación con el bloque de código en el que se declaran:
+
+Alcance de bloque:
+
+let: Tiene un alcance de bloque. Esto significa que una variable declarada con let solo está disponible dentro del bloque en el que se declara, ya sea un bloque de instrucciones { }, un bucle for, una función, etc. Fuera de ese bloque, la variable no es accesible.
+var: Tiene un alcance de función o global. Esto significa que una variable declarada con var está disponible en toda la función en la que se declara o, si se declara fuera de cualquier función, es global y está disponible en todo el ámbito del script.
+Hoisting:
+
+let: No está sujeto al fenómeno de hoisting (elevación). Las variables let no son inicializadas hasta que la ejecución alcanza la línea en la que están declaradas. Intentar acceder a una variable let antes de su declaración resultará en un error de referencia no definida (ReferenceError).
+var: Está sujeto al hoisting. Las variables var son inicializadas con el valor undefined durante la fase de compilación, lo que significa que pueden ser accesibles antes de su declaración (aunque con un valor undefined).
+Ejemplo:
+
+javascript
+Copy code
+// Ejemplo de let
+function exampleLet() {
+    let x = 10;
+    if (true) {
+        let y = 20;
+        console.log(x); // válido, x está disponible dentro del bloque
+        console.log(y); // válido, y está disponible dentro del bloque
+    }
+    console.log(x); // válido, x está disponible dentro de la función
+    // console.log(y); // inválido, y no está disponible fuera del bloque
+}
+
+exampleLet();
+
+// Ejemplo de var
+function exampleVar() {
+    var a = 10;
+    if (true) {
+        var b = 20;
+        console.log(a); // válido, a está disponible dentro del bloque y la función
+        console.log(b); // válido, b está disponible dentro del bloque y la función
+    }
+    console.log(a); // válido, a está disponible dentro de la función
+    console.log(b); // válido, b está disponible dentro de la función (hoisting)
+}
+
+exampleVar();
+En resumen, let proporciona un alcance de bloque más seguro y predecible en comparación con var. Es una buena práctica utilizar let en lugar de var siempre que sea posible, especialmente para evitar problemas relacionados con el hoisting y para asegurar un alcance más limitado y controlado de las variables.
+
+
+User
+lo que significa que pueden ser accesibles antes de su declaración . A que te refieres con est parte de la respuesta anterior?
+ChatGPT
+Cuando menciono que las variables declaradas con var pueden ser accesibles antes de su declaración debido al hoisting, me refiero a un comportamiento específico en JavaScript donde las declaraciones de variables (pero no sus asignaciones) son "elevadas" (hoisted) al inicio de su ámbito de función o global durante la fase de compilación.
+
+Esto significa que, en términos prácticos, JavaScript reserva memoria para las variables var antes de que el código se ejecute realmente. Como resultado, puedes acceder a una variable var incluso antes de su declaración. Sin embargo, el valor de la variable será undefined hasta que se le asigne un valor.
+
+Veamos un ejemplo:
+
+javascript
+Copy code
+console.log(a); // Imprime undefined
+var a = 10;
+console.log(a); // Imprime 10
+Este código parece extraño, pero debido al hoisting, es equivalente a:
+
+javascript
+Copy code
+var a;
+console.log(a); // Imprime undefined
+a = 10;
+console.log(a); // Imprime 10
+El valor de a está disponible incluso antes de su declaración, pero solo como undefined hasta que se le asigne el valor 10. Este comportamiento puede llevar a errores difíciles de depurar, por lo que es una buena práctica declarar e inicializar las variables al principio de su ámbito, independientemente de si se están utilizando var, let o const.
+
+
+
+
+*************************MIENTRAS QUE LET Y CONST TIENEN ALCANCE DE BLOQUE, VAR TIENE ALCANCE DE FUNCION
+
+Cuando menciono que las variables declaradas con var pueden ser accesibles antes de su declaración debido al hoisting, me refiero a un comportamiento específico en JavaScript donde las declaraciones de variables (pero no sus asignaciones) son "elevadas" (hoisted) al inicio de su ámbito de función o global durante la fase de compilación.
+
+Esto significa que, en términos prácticos, JavaScript reserva memoria para las variables var antes de que el código se ejecute realmente. Como resultado, puedes acceder a una variable var incluso antes de su declaración. Sin embargo, el valor de la variable será undefined hasta que se le asigne un valor.
+
+Veamos un ejemplo:
+
+javascript
+Copy code
+console.log(a); // Imprime undefined
+var a = 10;
+console.log(a); // Imprime 10
+Este código parece extraño, pero debido al hoisting, es equivalente a:
+
+javascript
+Copy code
+var a;
+console.log(a); // Imprime undefined
+a = 10;
+console.log(a); // Imprime 10
+El valor de a está disponible incluso antes de su declaración, pero solo como undefined hasta que se le asigne el valor 10. Este comportamiento puede llevar a errores difíciles de depurar, por lo que es una buena práctica declarar e inicializar las variables al principio de su ámbito, independientemente de si se están utilizando var, let o const.
+
+User
+si declaro var dentro de un bloque de funcion y le asigno un valor y luego de esto la llamo desde fuera de la funcion que pasa?
+ChatGPT
+Si declaras una variable con var dentro de un bloque de función, esa variable tendrá un alcance de función. Esto significa que estará disponible para ser accedida dentro de la función en la que se declara y en cualquier bloque interno, pero no estará disponible fuera de la función.
+
+Veamos un ejemplo:
+
+javascript
+Copy code
+function ejemploFuncion() {
+    if (true) {
+        var x = 10;
+    }
+    console.log(x); // Imprime 10
+}
+
+ejemploFuncion();
+console.log(x); // Esto provocará un ReferenceError: x is not defined
+En este ejemplo, x está declarada con var dentro del bloque if, pero todavía es accesible dentro de la función ejemploFuncion() porque var tiene un alcance de función. Sin embargo, fuera de la función ejemploFuncion(), x no está definida y provocará un error ReferenceError.
+
+Por lo tanto, si intentas acceder a x desde fuera de la función ejemploFuncion(), obtendrás un error ReferenceError porque x solo está definida dentro del alcance de la función.
+
+User
+osea que me estas diciendo que var, let y const tienen un alcance de funcion por tanto el alcance no seria diferencia
+ChatGPT
+Mis disculpas por la confusión anterior. Tienes razón en señalar que tanto var, let y const tienen un alcance de función. La diferencia clave entre ellos radica en el alcance de bloque.
+
+Mientras que var tiene un alcance de función o global, lo que significa que la variable es accesible dentro de la función en la que se declara o globalmente si se declara fuera de cualquier función, let y const tienen un alcance de bloque. Esto significa que están limitados al bloque en el que se declaran, ya sea dentro de una función, un bucle for, una instrucción if, entre otros. Fuera de ese bloque, las variables let y const no son accesibles.
+
+Entonces, en términos de alcance de bloque, let y const son diferentes de var. Esto proporciona una mayor granularidad y control sobre el alcance de las variables, lo que puede ayudar a evitar errores y a escribir código más seguro y más fácil de mantener.
+
+User
+a que te refieres con alcance de bloque, que es un bloque? uan funcion no seria un bloque?
+ChatGPT
+Mis disculpas por la confusión. Permíteme aclarar eso.
+
+Un bloque en JavaScript es cualquier conjunto de declaraciones y sentencias encerradas entre llaves { }. Por lo tanto, las funciones, los bucles for, las estructuras if, entre otros, pueden contener bloques.
+
+El alcance de bloque se refiere a la visibilidad y accesibilidad de las variables dentro de un bloque específico. Las variables declaradas con let y const tienen un alcance de bloque, lo que significa que solo están disponibles dentro del bloque en el que se declaran.
+
+Veamos un ejemplo:
+
+javascript
+Copy code
+function ejemploFuncion() {
+    let x = 10;
+    if (true) {
+        let y = 20;
+        console.log(x); // x es accesible aquí
+        console.log(y); // y es accesible aquí
+    }
+    console.log(x); // x sigue siendo accesible aquí
+    // console.log(y); // Esto provocará un ReferenceError, y no es accesible aquí
+}
+
+ejemploFuncion();
+En este ejemplo, tanto x como y tienen un alcance de bloque. Están disponibles dentro del bloque if, pero no fuera de él. x también es accesible en el bloque de la función, ya que su declaración está fuera del bloque if. Sin embargo, y no es accesible fuera del bloque if, ya que su declaración está limitada a ese bloque.
+
+Es importante destacar que una función también puede considerarse un bloque, pero cuando hablamos de alcance de bloque, generalmente nos referimos a bloques más pequeños dentro de la función, como bloques if, bucles for, etc.
+
+User
+puedes colocarme un ejemplo analogo para var?
+ChatGPT
+Por supuesto, aquí tienes un ejemplo que ilustra el alcance de var en comparación con let en bloques:
+
+javascript
+Copy code
+function ejemploFuncion() {
+    var x = 10;
+    if (true) {
+        var y = 20;
+        console.log(x); // x es accesible aquí
+        console.log(y); // y es accesible aquí
+    }
+    console.log(x); // x sigue siendo accesible aquí
+    console.log(y); // y también es accesible aquí debido al hoisting
+}
+
+ejemploFuncion();
+En este ejemplo, tanto x como y se declaran con var, lo que significa que tienen un alcance de función. Esto significa que son accesibles dentro de la función ejemploFuncion() y en cualquier bloque interno, como el bloque if.
+
+Aunque y se declara dentro del bloque if, debido al hoisting, la declaración de var y se "eleva" al principio de la función ejemploFuncion(), lo que hace que y sea accesible en toda la función.
+
+Es importante tener en cuenta que, a diferencia de let y const, var no tiene un alcance de bloque. Por lo tanto, y también es accesible fuera del bloque if.
+
+
+
+
