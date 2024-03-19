@@ -1,0 +1,13 @@
+
+REACT FUNDAMENTAL CONCEPTOS
+
+React es una libreria declarativa=> basada en programacion declarativa,defines el resultado deseado y el sistema se encarga de determinar cómo lograr ese resultado. 
+JSX es una estension de la sintaxis de javascript que nos permite escribir en archivos javascript, codigo mas familiar ya que se parece mucho a html esto se hace de una manera mas expresiva y sencilla.
+
+En resumen, React es considerado declarativo porque te permite definir la interfaz de usuario en términos abstractos y centrarte en describir cómo debería ser la interfaz en función del estado de la aplicación, en lugar de especificar paso a paso cómo debe actualizarse la interfaz en respuesta a los cambios. Esto conduce a un código más limpio, modular y fácil de mantener.
+
+El codigo jsx no es javascript valido para el v8 del navegador entonces debe ser compilado a js standard por medio de babel.
+Este proceso se ejecuta cuando estamos listos para poner la aplicacion en produccion y se hace mediante el comando npm run build, en ese momento todo ese codigo se compila a js standard y es almacenado en el archivo dist.
+
+El hecho de que hagas npm start lo que hace es levantar un servidor que interpreta en tiempo real las modificaciones del codigo para una experiencia de desarrollo mas eficiente mediante el hot reloading.El servidor compila en tiempo real. Lo anterior no debe ser confundido con el proceso de bildeo que es la compilacion ejecutada por babel pasando el codigo a js standard y colocandolo en el directorio build o dist listo para servir la aplicacion al navegador.La consequencia de ejecutar npm run build es lo que activa el proceso de construccion de la pagina.Una vez se termina ese proceso me crea dist con una version optimizada de mi codigo.
+Entonces antes de desplegar la app en un servidor publico se debe realizar el buildeo.

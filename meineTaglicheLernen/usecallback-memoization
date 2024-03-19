@@ -1,0 +1,34 @@
+
+
+Alle fetch petitionen haben eine Status die aus Ajax Objekt kommen. Auch haben diese petitionen ein Status text. Es ist etwas bezuglich zu der Fetch Prozess.
+
+*Bitte fang mit Ajax und JavaScript kiknzepten an!!!!!
+
+*Merk man an dass fetch ist eine api und um zu das felher manipulieren durch ajx es ist verpflichtend das man die try catch block benutzt
+
+immer wenn du die fetch-methode verdendest musst du die try catch benutzen
+
+
+*Date un repaso a lo que tiene que ver con el objeto ajax. que es el objeto ajax?
+
+***Denk dran dass, estatus oder res.status ist eine Eigenshaft des Ajax-objekt. 
+Eigenshaft= property
+
+MEMORIZATION TECHNIQUES _ reactMemo useCallback, useMemo
+el proceso de memorizacion consiste en cachear componentes y funciones para que cuando un componente se este renderizando por el paso de propiedades pero que internamentre tengo otros componentes que no se modificaron permanezcan en cache, ojo para memorizar esos componentes la libreria utiliza internamente unproceso de comparacion que puede ser incluso mas costoso que renderizar esse componente.
+El objetico a la final es optimizar el rendimiento de la aplicacion pero hay que tener mucho cuidado.
+
+la libreria trae una funcion memo.=>se encarga de memorizar un componente
+lo vuelve a renderizar al momento que sus props cambien
+evita re-renderizados
+Casos de uso: tenemos muchos elementos en una lista,tenemos un componente muy pesado,llamamos datos de api o nos salen alertas de rendimiento
+Ojo: react memo es para memorizar un componente por completo
+
+*LA unica manera que react memo vuelva a renderizar es que las props del documento padre al componente hijo cmabien,.
+
+
+ USECALLBACK
+
+El objetivo de useCallback es memorizar funciones puras.
+
+

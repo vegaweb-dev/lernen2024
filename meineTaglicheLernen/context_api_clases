@@ -1,0 +1,13 @@
+
+***************API CONTEXT***********
+
+Api context es una manera nativa de react para manejar el estado*****
+el contexto no necesita instalar librerias como redux por ejemplo.
+Nos permite tener variables de contextos mas globales. eje: una aplicacion que tenga modo oscuro o multiidiomas.
+
+Tambien se usa para cuando el usuario este registrado.El el contexto se guarda el objeto del usuario. cuando el usuario este null solo se muestra la parte publica y cuando tenga algo se permita acceder a las rutas privadas.
+
+
+**la practica dice que por cada tematica se crea un contexto.
+aplicacion pequeña un solo contexto
+aplicaciones mas grandes varios contextos

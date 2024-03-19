@@ -1,0 +1,17 @@
+
+
+                                   CUSTOM HOOKS
+
+
+*********El concepto de custom hooks : 
+
+
+Un custom hook en React es una función JavaScript que te permite encapsular lógica reutilizable. Estas funciones siguen una convención de nombres, comenzando con la palabra "use", y pueden utilizar Hooks internos de React si es necesario. Los custom hooks permiten separar la lógica de un componente React para que pueda ser compartida entre componentes diferentes sin necesidad de repetirla.
+
+Reutilización de lógica: Los custom hooks permiten encapsular lógica compleja en funciones reutilizables, lo que hace que el código sea más modular y fácil de mantener.
+
+Composición: Al igual que los Hooks proporcionados por React, los custom hooks también pueden componerse entre sí. Esto significa que puedes crear hooks personalizados que utilicen otros hooks personalizados, lo que ofrece una gran flexibilidad y modularidad.
+
+Estado local: Los custom hooks pueden contener su propio estado interno utilizando Hooks como useState o useReducer, lo que les permite mantener y manipular el estado local de manera independiente de los componentes de React.
+
+Convenio de nombres: Por convención, los custom hooks deben comenzar con la palabra "use" para que React pueda distinguirlos de los otros componentes y funciones en tu aplicación.

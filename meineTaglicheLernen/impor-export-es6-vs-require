@@ -1,0 +1,23 @@
+
+
+****DIFERENCIAS ENTRE USAR IMPORT/EXPORT VS REQUIRE(COMMONJS) EN REACT
+
+En términos de eficiencia, rendimiento y peso, generalmente es preferible utilizar el sistema de importación de ECMAScript (ES6) en lugar de require de CommonJS en aplicaciones React modernas. Aquí hay algunas razones para esto:
+
+Tamaño del paquete y Tree Shaking: El sistema de importación de ES6 es estándar en aplicaciones modernas de JavaScript y es compatible con herramientas como Webpack y Rollup, que pueden realizar optimizaciones como el "Tree Shaking". Esto significa que solo se incluyen en el paquete final las partes del código que realmente se están utilizando, lo que reduce el tamaño del paquete final y mejora el rendimiento de carga de la aplicación. require de CommonJS no es compatible con esta técnica de optimización.
+
+Modularidad y claridad del código: El sistema de importación de ES6 es más modular y permite una sintaxis más clara y concisa que require de CommonJS. Además, las importaciones de ES6 tienen una sintaxis más consistente y están más integradas con otras características de JavaScript moderno, como los módulos asincrónicos (import()).
+
+Optimizaciones de rendimiento: Los motores modernos de JavaScript pueden realizar optimizaciones en tiempo de compilación cuando se utilizan importaciones de ES6, lo que puede mejorar el rendimiento de la aplicación. Por ejemplo, los importadores de ES6 pueden realizar análisis estático para determinar las dependencias del módulo y optimizar la carga de módulos bajo demanda.
+
+En resumen, mientras que require de CommonJS sigue siendo compatible con Node.js y puede funcionar en aplicaciones React utilizando herramientas como Browserify, en términos de eficiencia, rendimiento y peso, es preferible utilizar el sistema de importación de ES6 en aplicaciones React modernas.
+
+Para Node.js, la respuesta es un poco diferente. Aunque Node.js todavía admite tanto require de CommonJS como importaciones de ES6, hay algunas consideraciones adicionales a tener en cuenta:
+
+Compatibilidad y madurez: require de CommonJS es el sistema de importación tradicional utilizado en Node.js desde sus primeras versiones. Es ampliamente compatible y está maduro en términos de uso. Por otro lado, las importaciones de ES6 son relativamente nuevas en el contexto de Node.js y pueden requerir configuración adicional o el uso de transpiladores como Babel para funcionar correctamente en versiones anteriores de Node.js.
+
+Rendimiento y tamaño del paquete: En términos de rendimiento y tamaño del paquete, en Node.js no hay una diferencia significativa entre require de CommonJS y las importaciones de ES6. Node.js utiliza un sistema de módulos interno para cargar módulos, y ambos sistemas de importación pueden ser eficientes en este sentido.
+
+Consistencia con el ecosistema: Aunque las importaciones de ES6 son parte del estándar ECMAScript y son más consistentes con el código JavaScript moderno, muchas bibliotecas y proyectos Node.js aún utilizan require de CommonJS para sus propias importaciones. En un entorno Node.js, es posible que necesites trabajar con ambas formas de importación dependiendo del contexto y de las bibliotecas que estés utilizando.
+
+En resumen, en el contexto de Node.js, ambos sistemas de importación tienen sus propias ventajas y desventajas. La elección entre require de CommonJS y las importaciones de ES6 puede depender de factores como la compatibilidad con versiones anteriores, la consistencia con el ecosistema existente y las preferencias personales del equipo de desarrollo.

@@ -1,0 +1,90 @@
+
+Boceto de hoja de vida
+
+Desarrollador frontend
+***CICLO DE VIDA ES ESENCIAL
+***SOLIDO DOMINIO DE JAVASCRIPT ES ESENCIAL SOBRE TODO LAS CARACTERISTICAS MAS NUEVAS DEL ESTANDARD
+***Graphql && React Native
+***lazy loading
+***PRELOAD Y PREFETCH PARA CARGUE DE RECURSOS CRITICOS DE FORMA ANTICIPADA
+***useCallback 
+***useMemo
+***Especializarse en el manejo del estado (REDUX TOOLKIT, CONTEXTO Y DRILLING)
+**TESTING => IMPORTANTISIMO
+**Usar AXE Y LIGHTHOUSE => para aprender sobre accesibilidad de la web.
+**!!!! PRACTIGAR DESPLIEGUE DE APLOCACIONES REACT EN ENTORNOS DE PRODUCCION
+**IDENTIFICACION DE CUELLOS DE BOTELLA EN REACT
+**PATRONES DE DISEÑO
+***IDENTIFICACION DE RENDERIZACIONES INNECESARIAS
+****COMPRESION DE IMAGENES USO DE WEBP PARA COMPRESION DE IMAGENES.
+***PATRONES DE DISEÑO :
+Contenedor-Presentador (Container-Presentational): 
+Render Prop
+Componente de Orden Superior (Higher Order Component - HOC)
+Patrón Observador (Observer Pattern)
+Patrón Redux:
+Patrón Singleton:
+Patrón Factory:
+Patrón Estrategia (Strategy Pattern)
+
+Comprime y optimiza las imágenes para reducir su tamaño y mejorar el tiempo de carga de la aplicación. Utiliza formatos de imagen más eficientes como WebP y herramientas de compresión de imágenes para optimizar las imágenes antes de cargarlas en la aplicación.
+
+Manejo y aplicacion de los principios de diseño y la arquitectura de las aplicaciones de react.Buenas practicas de organizacion de archivos, componetizacion y separacion de preocupaciones.
+Practica el uso de herramientas de gestión de estado en React, como Redux o Context API. Aprende a manejar el estado de manera eficiente y a compartir datos entre componentes.
+pruebas unitarias y de integración y practica escribiendo pruebas para tus componentes y funciones. Utiliza herramientas como Jest y React Testing Library.
+Investiga sobre técnicas de optimización de rendimiento en React y aplícalas en tus proyectos. Aprende a identificar y resolver cuellos de botella en el rendimiento de tu aplicación.
+Accesibilidad: Aprende sobre accesibilidad web y asegúrate de que tus aplicaciones sean accesibles para todos los usuarios. Utiliza herramientas como Axe y Lighthouse para verificar la accesibilidad de tu aplicación.
+Despliegue y Mantenimiento: Practica el despliegue de aplicaciones React en entornos de producción y aprende sobre estrategias de mantenimiento a largo plazo. Asegúrate de mantener tu código limpio y bien documentado.
+
+Diseñar la arquitectura de la aplicación y la estructura de los componentes.
+Escribir código limpio, eficiente y mantenible en React utilizando las últimas prácticas y tecnologías.
+Crear componentes reutilizables y escalables que sigan los principios de diseño y arquitectura.
+Implementar funcionalidades complejas como gestión de estado, enrutamiento y autenticación.
+
+
+Escribir pruebas unitarias y de integración para garantizar la calidad y estabilidad del código.
+Automatizar pruebas utilizando herramientas como Jest y React Testing Library.
+Realizar pruebas de rendimiento para identificar y solucionar cuellos de botella en la aplicación.
+
+Identificar áreas de la aplicación que pueden ser optimizadas para mejorar el rendimiento.
+Implementar técnicas de optimización de rendimiento como carga diferida, memoización y eliminación de renderizaciones innecesarias.
+Realizar pruebas de rendimiento y optimizar el tiempo de carga y la velocidad de respuesta de la aplicación.
+Configurar y desplegar la aplicación en entornos de desarrollo, prueba y producción.
+Implementar estrategias de despliegue continuo para facilitar actualizaciones frecuentes y sin interrupciones.
+Monitorear el rendimiento de la aplicación y solucionar problemas de estabilidad y seguridad.
+Mantener la documentación actualizada y proporcionar soporte técnico al equipo y a los usuarios finales.
+
+*Lazy loading=>se cargan los modulos solo cuando sea necesario en lugar de cargar todo al inicio => la aplicacion tarda menos en cargar.
+
+*Memoización: Utiliza la memoización para almacenar en caché los resultados de las funciones costosas computacionalmente. Esto puede evitar recálculos innecesarios y mejorar el rendimiento de la aplicación.
+** Utiliza PureComponent o memoización para evitar renderizaciones innecesarias y optimizar la velocidad de renderizado.
+Optimización de Imágenes: Comprime y optimiza las imágenes para reducir su tamaño y mejorar el tiempo de carga de la aplicación. Utiliza formatos de imagen más eficientes como WebP y herramientas de compresión de imágenes para optimizar las imágenes antes de cargarlas en la aplicación.
+**Code Splitting: Divide el código de la aplicación en fragmentos más pequeños y carga solo los fragmentos necesarios para una determinada ruta o funcionalidad. Esto puede reducir el tiempo de carga inicial de la aplicación y mejorar la velocidad de navegación.
+
+***Virtualización de Listas: Utiliza la virtualización de listas para renderizar solo los elementos visibles en una lista larga. Esto puede mejorar el rendimiento de la aplicación al reducir la cantidad de elementos que se renderizan en pantalla.
+
+*****Optimización del Estado: Minimiza el uso de estado global y asegúrate de que el estado se mantenga lo más localizado posible en los componentes que lo necesitan. Utiliza herramientas de gestión de estado como Redux o Context API de manera eficiente para evitar el exceso de re-renderizado y la duplicación de estado.
+
+***Eliminación de Dependencias Innecesarias: Elimina dependencias innecesarias y código muerto de la aplicación para reducir el tamaño del paquete y mejorar el tiempo de carga de la aplicación.
+
+***Memoria Caché: Utiliza la memoria caché para almacenar en caché datos que se acceden con frecuencia y que no cambian con frecuencia. Esto puede mejorar el rendimiento de la aplicación al reducir la necesidad de realizar solicitudes de red o cálculos repetidos.
+
+****Preload y Prefetch: Utiliza las etiquetas <link rel="preload"> y <link rel="prefetch"> para cargar recursos críticos de la aplicación de forma anticipada y mejorar el tiempo de carga de la página.
+
+
+
+****JavaScript Avanzado: Un conocimiento profundo de JavaScript, incluyendo conceptos avanzados como closures, funciones de orden superior, programación funcional, y manejo de errores asincrónicos con async/await.
+
+****React Profesional: Un dominio completo de React y sus características avanzadas, como renderizado server-side, suspense, lazy loading, portales, y hooks personalizados. Deberían ser capaces de diseñar y desarrollar arquitecturas de aplicaciones React complejas y escalables.
+
+
+****Arquitectura de Aplicaciones: Experiencia en la definición de arquitecturas de aplicaciones frontend sólidas, incluyendo la separación de preocupaciones, la modularidad, la escalabilidad, y el diseño de patrones de código limpio y mantenible.
+
+
+*****Gestión de Estado Avanzada: Dominio de técnicas avanzadas de gestión de estado en React, incluyendo la optimización del rendimiento con memorización de resultados, la normalización de datos, y la implementación de patrones de flujo de datos complejos.
+
+****Optimización de Rendimiento: Experiencia en la identificación y resolución de cuellos de botella de rendimiento en aplicaciones React, utilizando herramientas de perfilado de rendimiento y técnicas avanzadas de optimización como el lazy loading, el prefetching de datos, y el code splitting.
+
+*****Testing Automatizado: Experiencia en la escritura de pruebas automatizadas exhaustivas para aplicaciones React, incluyendo pruebas unitarias, pruebas de integración, y pruebas de extremo a extremo utilizando herramientas como Cypress o Selenium.
+
+****Despliegue y CI/CD: Familiaridad con los procesos de despliegue continuo y entrega continua (CI/CD), incluyendo la automatización de pruebas, la integración con sistemas de control de versiones y la implementación en entornos de producción.

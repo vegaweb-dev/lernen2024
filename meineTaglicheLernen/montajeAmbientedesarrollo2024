@@ -1,0 +1,22 @@
+metodologia de trabajo:
+
+1) se trabaja con dos computadoras o torres de trabajo 
+origin  =>estacion1=>pc1=>ich  carlosjuniorvega94@gmail.com esta estacion es llamda origin.
+partner =>estacion2=>pc2=>Alix carlosvegadesarrollos@gmail.com  esta seria la estacion partner
+
+=>para origin se crea un github asociado a el correo de origin 94@gmail.com
+=>para origin se crea un Jira asociado a el correo de origin 94@gmail.com
+=>para partner se crea un github y un bitbucket y  una cuenta en jira
+=>amarrar al git de partner el nombre carlos vega y correo correspondi9ente a la estacion2.
+=>plantear un projecto corto para arrancarlo con jira e inicialixar las pilas de trabajo y los sprint
+=>Desde el origin inicializar un proyecto en gihub e invitar a partner
+
+        resultados
+
+1)Origin => jira,github  94@gmail.com
+2)partner =>jira,github,bitbucket  vegadesarrollos@gmail.com
+
+
+
+
+

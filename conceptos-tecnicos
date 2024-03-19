@@ -337,7 +337,7 @@ const obj = { name: "John" };
 Lo que sucede es que obj no almacena el objeto en sí mismo, sino una referencia a la ubicación de ese objeto en la memoria. Esta referencia es lo que permite acceder al objeto y manipularlo a través de la variable obj.
 
 Entonces, para aclarar, el objeto { name: "John" } en sí mismo se almacena en el heap, mientras que la variable obj almacena una referencia a la ubicación de este objeto en el heap.
-
+aaaaaaaaa
 
 
 *los objetos se comparan enbase a su ubicacion en memoria

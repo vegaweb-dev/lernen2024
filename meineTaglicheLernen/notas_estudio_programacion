@@ -1,0 +1,18 @@
+ 
+
+*******NOTAS SOBRE EL RETURN
+return permite que una función devuelva un valor. Esto es crucial para que las funciones en JavaScript produzcan resultados que puedan ser utilizados por otras partes del código.
+Sin return, una función podría ejecutarse pero no produciría un resultado utilizable.
+Se debe usar return siempre que se desee devolver un valor desde una función.
+En funciones que no necesitan devolver un valor (como funciones que solo realizan una tarea sin necesidad de producir un resultado), no es necesario utilizar return.
+
+
+El concepto de return se deriva de la teoría de la computación y la programación estructurada.
+Se basa en el principio de que las funciones deben tener una entrada (argumentos) y una salida (valor devuelto).
+Este concepto se ha incorporado a muchos lenguajes de programación, incluido JavaScript, para permitir la modularidad y la reutilización del código.
+Si una función no tiene una declaración return o si return se llama sin un valor, la función devolverá undefined automáticamente.
+
+
+En JavaScript, cuando una función de flecha (=>) tiene una sola expresión y esa expresión está en la misma línea que la declaración de la función, no es necesario usar la palabra clave return. Esto se conoce como una "arrow function de una línea".
+
+Entonces, en el caso de tours.map(tour => <Tour/>), la función de flecha tiene una sola expresión: <Tour/>. Como esta expresión está en la misma línea que la declaración de la función de flecha, JavaScript asume implícitamente que esta expresión es lo que se debe devolver.

@@ -1,0 +1,28 @@
+
+
+                                   CUSTOM HOOKS
+
+
+*********El concepto de custom hooks : 
+
+
+Un custom hook en React es una función JavaScript que te permite encapsular lógica reutilizable. Estas funciones siguen una convención de nombres, comenzando con la palabra "use", y pueden utilizar Hooks internos de React si es necesario. Los custom hooks permiten separar la lógica de un componente React para que pueda ser compartida entre componentes diferentes sin necesidad de repetirla.
+
+Reutilización de lógica: Los custom hooks permiten encapsular lógica compleja en funciones reutilizables, lo que hace que el código sea más modular y fácil de mantener.
+
+Composición: Al igual que los Hooks proporcionados por React, los custom hooks también pueden componerse entre sí. Esto significa que puedes crear hooks personalizados que utilicen otros hooks personalizados, lo que ofrece una gran flexibilidad y modularidad.
+
+Estado local: Los custom hooks pueden contener su propio estado interno utilizando Hooks como useState o useReducer, lo que les permite mantener y manipular el estado local de manera independiente de los componentes de React.
+
+Convenio de nombres: Por convención, los custom hooks deben comenzar con la palabra "use" para que React pueda distinguirlos de los otros componentes y funciones en tu aplicación.
+
+****Memoizacion => procede del termino memorandum. =>tecnica de optimizacion que permite reducir los tiempos de calculo, almacenando los resultados de una subrutina o calculo en una memoria intermedia y devolviendo esos mismos valores cuando se llama a esa subrutina o funcion con los mismos parametros de entrada. Para el caso de react es guardar
+
+Memo=> no renderiza un componente si sus props no han cambiado.La memoizacion es simplemente una tecnica de optimizacion. Tu puedes memoizar el componente pero aun asi el componente se renderiza. Cuado memoizas el componente no se renderiza si las props del componente padre no han cambiado.Existe la posibilidad que aun asi la renderice entonces la memoizacion es solo una posibilidad de optimizacion. No una garantia.
+memo devuelve un nuevo componente de React. Se comporta de la misma manera que el componente proporcionado a memo excepto que React no siempre lo rerenderizará cuando su padre sea rerenderizado a menos que sus props hayan cambiado.
+Consejos practicas al usar memo: 
+**mira un solo valor que cambia puede dañar una memoizacion asi que hay que ser cuidadoso.
+**prefiere siempre el estado local. Evita el estado global si no es necesario.
+***Mantén tu lógica de renderizado pura. Si volver a renderizar un componente causa un problema o produce algún artefacto visual notorio, ¡es un bug en tu componente! Arregla el bug en lugar de añadir memoización.
+
+*****Aprender useCallback

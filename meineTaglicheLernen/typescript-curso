@@ -1,0 +1,13 @@
+
+
+*************typescript curso****************
+
+despues de crear la aplicacion con yarn con el comando yarn create vite hay que configurar el linter.
+lo primero es: en la terminal npx eslint --init. Si estoy utilizando yarn pues no importa. Debe ser con npx, el solo nos ofrecera la posibilidad de trabajr con yarn para descargar el stilo standard.
+*****ojo que hay que tener la exptencion de eslint instalada sea previamente o despues el tema es que este instalada.
+
+ya una vez este todo lo anterior probamos para ver si el linter funciona. como? solo añadele un punto y coma al final de linea y mira si chilla. si no chila ingresa esta linea:
+project:'./tsconfig.json' en el objeto parserOptions de los run commands
+
+fijate que estas instrucciones vienen en el markdown y solo le esta informando al linter sobre la estructura de ese projecto ts mediante su tsconfig de tal forma que el linter sabe la configuracion del archivo que tiene que analizar.
+
