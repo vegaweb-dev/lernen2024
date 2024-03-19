@@ -323,6 +323,25 @@ Aunque y se declara dentro del bloque if, debido al hoisting, la declaración de
 
 Es importante tener en cuenta que, a diferencia de let y const, var no tiene un alcance de bloque. Por lo tanto, y también es accesible fuera del bloque if.
 
+*******NOTA INTERESANTISIMA
+
+Cuando creas un objeto en JavaScript, como { name: "John" }, el motor de JavaScript reserva un espacio en la memoria para ese objeto en una región de la memoria llamada heap (montón). El objeto en sí, es decir, sus propiedades y valores, se almacena en este espacio de memoria.
+
+Por lo tanto, el objeto { name: "John" } en sí mismo está almacenado en el heap.
+
+Cuando creas una variable y le asignas este objeto, por ejemplo:
+
+javascript
+Copy code
+const obj = { name: "John" };
+Lo que sucede es que obj no almacena el objeto en sí mismo, sino una referencia a la ubicación de ese objeto en la memoria. Esta referencia es lo que permite acceder al objeto y manipularlo a través de la variable obj.
+
+Entonces, para aclarar, el objeto { name: "John" } en sí mismo se almacena en el heap, mientras que la variable obj almacena una referencia a la ubicación de este objeto en el heap.
+
+
+
+
+
 
 
 
