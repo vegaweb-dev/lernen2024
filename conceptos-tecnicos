@@ -340,7 +340,9 @@ Entonces, para aclarar, el objeto { name: "John" } en sí mismo se almacena en e
 
 
 
-
+*los objetos se comparan enbase a su ubicacion en memoria
+*los primitivos se comparan sus valores. pero los objetos se comparan en base a su ubicacion en memoria
+*cuando tienews dos objetos aunque sus propiedades sean las mismas estan apuntando a valores de memoria diferentes.
 
 
 
