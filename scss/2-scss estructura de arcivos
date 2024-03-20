@@ -1,0 +1,13 @@
+ESTRUCTURA DE LA CARPETA SCSS O LA CARPETA SASS
+
+*styles/ => contiene todos los archivos scss del proyecto
+*styles/base => aqui se colocan los estilos base del proyecto, como reset.css(o su equivalente en scss), variables globales,mixins,y funciones basicas que se usan en el sitio.
+*styles/components/   => se almacenan los estilos para componentes reutilizables como botones,encabezados,pies de pagina tarjetas etc
+*styles/layouts/ =>contiene estilos para los diferentes diseños de pagina o secciones del sitio web, como diseños de columnas ,barras laterales etc
+*styles/pages/
+*estilos específicos de cada página del sitio web. Cada página del sitio podría tener su propio archivo SCSS para los estilos únicos de esa página.
+*styles/vendor/: En esta carpeta se incluyen estilos de terceros, como frameworks CSS externos o bibliotecas de componentes que no son parte del proyecto principal.
+
+*styles/utils/: Aquí se almacenan utilidades de estilos, como clases de utilidad (por ejemplo, clases para alinear elementos o ocultar contenido), animaciones, estilos de impresión, etc.
+
+*styles/_main.scss: Este archivo principal importa todos los demás archivos SCSS y es el punto de entrada principal para compilar el CSS final. Aquí se establece el orden de importación de los otros archivos SCSS según las necesidades del proyecto.

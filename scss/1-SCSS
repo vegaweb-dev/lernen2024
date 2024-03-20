@@ -1,0 +1,15 @@
+
+SASS: sass es un metalenguaje de hoja de stilo basado en el lenguaje sassscript que es un lenguaje de script simple.
+Finalmente el sass se compila a css
+Ahora, tenemos dos manreas de escribir sass una es .sass y la otra .scss
+la ventaja de sass sea escrito con sintaxis scss o con sass es que nos brinda caracteristicass adicionales como funciones,variables,mixins, anidacion y herencia de selectores.
+
+SCSS (Syntactically Awesome Style Sheets) es una forma de escribir hojas de estilo en cascada (CSS) con funcionalidades extendidas. SCSS es en realidad una de las dos sintaxis compatibles con Sass (Syntactically Awesome Stylesheets), siendo la otra la sintaxis Sass original, que utiliza indentación en lugar de llaves y puntos y coma para separar las declaraciones.
+SCSS, al igual que Sass, es un preprocesador CSS que agrega funcionalidades adicionales a CSS, como variables, anidamiento de selectores, mixins, funciones y directivas de control (como if, for, while, etc.). Estas características hacen que el código CSS sea más modular, reutilizable y fácil de mantener.
+
+Una de las ventajas clave de usar SCSS es que proporciona una forma más organizada y eficiente de escribir estilos, permitiendo a los desarrolladores escribir menos código repetitivo y más modular. Además, SCSS puede compilar a CSS estándar, por lo que puede ser utilizado en cualquier proyecto web moderno.
+
+Para utilizar SCSS en un proyecto, primero necesitas compilarlo a CSS utilizando un compilador SCSS. Hay muchas herramientas disponibles para compilar SCSS, como Sass CLI, Webpack, Gulp, Grunt, entre otros. Una vez que se ha compilado el SCSS, el navegador web puede interpretar el CSS resultante y aplicar los estilos a la página web.
+
+
+
