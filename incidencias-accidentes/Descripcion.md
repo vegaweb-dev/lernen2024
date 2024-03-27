@@ -1,0 +1,1 @@
+En esta seccion se guardan todas los problemas que se me presentan en un determinado proceso y como fue solucionado para tenerlo como referencia para un futuro.
